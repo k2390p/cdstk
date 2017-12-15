@@ -1,0 +1,1002 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Selected Items</ion-title>
+    <ion-grid>
+      <ion-row>
+
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv1">Fund Type: Equity</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv2">Fund Type: FI</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv3">USD</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv4">JPY</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv5">EUR</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv6">No Currency</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv7"><=397 Days</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv8">>397 Days & <2 years</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv9">>2 years</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv10">Time of Purchase</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv11">Checked Everyday</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv12">Yes : Use Unpublished Analytics</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv13">No :  Use Unpublished Analytics</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv14">All Equities</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv15">All FI</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv16">Select from Equity and FI Securities</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv17">Yes : Private Placements</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv18">No : Private Placements</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv19">Restricted Securities - I</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv20">Restricted Securities - II</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv21">CITs : Equity</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv22">CITs : FI</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv23">Yes : Impact Management</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv24">No : Impact Management</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv25">Yes : Include CIT Securities</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv26">No : Include CIT Securities</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv27">Yes : Use FMR Rating</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv28">No : Use FMR Rating</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv29">5% : Max Issuer Rule</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv30">10% : Max Issuer Rule</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv31">20% : Max Issuer Rule</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv32">10% : Max Industry Rule</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv33">20% : Max Industry Rule</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv34">25% : Max Industry Rule</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv35">30% : Max Industry Rule</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv36">ToT : Compliance Check Timing</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv37">EoD : Compliance Check Timing</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv38">Barclays : Benchmark</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv39">Fitch : Rating</ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv40">20 bps  : Performance Objective </ion-badge>
+          <ion-badge item-end class="badge badge-md" *ngIf="iconDiv41">30 bps  : Performance Objective</ion-badge>
+
+    </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+<ion-content padding class="page1">
+  <ion-slides #slides>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Select Fund Type</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv1')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv1">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  E
+                </ion-card-title>
+                <p>
+                  EQUITY
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv2')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv2">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  FI
+                </ion-card-title>
+                <p>
+                  Fixed Income
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide>
+
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Select Currency</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-12 col-sm-12>
+        <ion-row>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv3')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv3">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon name="logo-usd" class="iconDiv3"></ion-icon>
+                </ion-card-title>
+                <p>
+                  USD
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv4')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv4">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon class="iconDiv4" name="logo-yen"></ion-icon>
+
+                </ion-card-title>
+                <p>
+                  JPY
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv5')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv5">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon name="logo-euro" class="iconDiv5"></ion-icon>
+                </ion-card-title>
+                <p>
+                  EURO
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv6')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv6">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon name="close-circle" class="iconDiv6"></ion-icon>
+                </ion-card-title>
+                <p>
+                  NONE
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Select Maturity Period</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv7')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv7">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon name="calendar" class="iconDiv7"></ion-icon>
+                </ion-card-title>
+                <p>
+                  *
+                  <=397 days </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv8')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv8">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon name="calendar" class="iconDiv8"></ion-icon>
+                </ion-card-title>
+                <p>
+                  *>397days &
+                  <2 years </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv9')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv9">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon name="calendar" class="iconDiv9"></ion-icon>
+                </ion-card-title>
+                <p>
+                  *> 2 years
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Maturity Checked At</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv10')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv10">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+
+                  <ion-icon name="time" class="iconDiv10"></ion-icon>
+                </ion-card-title>
+                <p>
+                  Time of Purchase
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv11')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv11">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  <ion-icon name="stopwatch" class="iconDiv11"></ion-icon>
+                </ion-card-title>
+                <p>
+                  Checked Everyday
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Maturity Calculation : Can use internal non-published analytics?</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv12')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv12">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  Y
+                </ion-card-title>
+                <p>
+                  YES
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv13')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv13">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  N
+                </ion-card-title>
+                <p>
+                  NO
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Standard Type of Instruments</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv14')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv14">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  E
+                </ion-card-title>
+                <p>
+                  All EQUITIES
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv15')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv15">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  FI
+                </ion-card-title>
+                <p>
+                  All Fixed Income
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv16')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv16">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  M
+                </ion-card-title>
+                <p>
+                  Select from Equity and FI Securities
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Private Placements?</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv17')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv17">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  Y
+                </ion-card-title>
+                <p>
+                  YES
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv18')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv18">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  N
+                </ion-card-title>
+                <p>
+                  NO
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Restricted Securities</ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv19')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv19">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  I
+                </ion-card-title>
+                <p>
+                  Regulation D, Rule 144A
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv20')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv20">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+
+                <ion-card-title>
+                  II
+                </ion-card-title>
+                <p>
+                  Regulation S
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Collective Investment Trusts (CITs): Primary Investment</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv21')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv21">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  E
+                </ion-card-title>
+                <p>
+                  EQUITY
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv22')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv22">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  FI
+                </ion-card-title>
+                <p>
+                  Fixed Income
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Impact Management & Administration of CITs</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv23')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv23">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  Y
+                </ion-card-title>
+                <p>
+                  YES
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv24')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv24">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  N
+                </ion-card-title>
+                <p>
+                  NO
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Include CIT held securities for compliance checks</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv25')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv25">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  Y
+                </ion-card-title>
+                <p>
+                  YES
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv26')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv26">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  N
+                </ion-card-title>
+                <p>
+                  NO
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Use FMR Rating if external rating is not available</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv27')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv27">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  Y
+                </ion-card-title>
+                <p>
+                  YES
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv28')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv28">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  N
+                </ion-card-title>
+                <p>
+                  NO
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Max issuer Rule </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv29')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv29">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  5
+                </ion-card-title>
+                <p>
+                  *<=5%
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv30')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv30">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  10
+                </ion-card-title>
+                <p>
+                  *<=10%
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-4 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv31')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv31">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  20
+                </ion-card-title>
+                <p>
+                  *<=20%
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Max Industry Rule</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-12 col-sm-12>
+        <ion-row>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv32')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv32">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  10
+                </ion-card-title>
+                <p>
+                  *<=10%
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv33')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv33">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  20
+                </ion-card-title>
+                <p>
+                  *<=20%
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv34')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv34">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  25
+                </ion-card-title>
+                <p>
+                  *<=25%
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-3 col-sm-4>
+            <ion-card (click)="cardSelected('iconDiv35')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv35">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  30
+                </ion-card-title>
+                <p>
+                  *<=30%
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Compliance Check Timing</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv36')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv36">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  ToT
+                </ion-card-title>
+                <p>
+                  Time of Trade
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv37')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv37">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  EoD
+                </ion-card-title>
+                <p>
+                  End of Day
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Benchmark</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv38')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv38">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  B
+                </ion-card-title>
+                <p>
+                  Barclays Treasury Index
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv39')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv39">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  F
+                </ion-card-title>
+                <p>
+                  Fitch
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-3 class="sectionHeader">Performance Objective: BPS</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid col-md-6 col-sm-12>
+        <ion-row>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv40')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv40">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  20
+                </ion-card-title>
+                <p>
+                  bps
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col col-md-6 col-sm-6>
+            <ion-card (click)="cardSelected('iconDiv41')" class="equityCard">
+              <ion-card-content>
+                <div class="iconDiv" *ngIf="iconDiv41">
+                  <ion-icon class="checkIcon" name="checkmark-circle"></ion-icon>
+                </div>
+                <ion-card-title>
+                  30
+                </ion-card-title>
+                <p>
+                  BPS
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+        <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+        Back
+      </button>
+    </ion-slide>
+    <ion-slide>
+      
+      <ion-row>
+        <ion-col>
+          <button ion-button color="light" (click)="goToHome()"> <ion-icon name="document" class="documentIcon"></ion-icon> Create Contract</button>
+          <button ion-button color="light" (click)="goToHome()"><ion-icon name="send" class="documentIcon"></ion-icon> Send Contract</button>
+          
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col>
+            <button class="backButton" ion-button round icon-start (click)="prevSlide()">
+              <ion-icon class="backIcon" name="md-backspace"></ion-icon>
+              Back
+            </button>
+  
+          </ion-col>
+        </ion-row>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
