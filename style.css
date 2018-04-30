@@ -13,7 +13,8 @@ td,th{
 
 h1,h2,h3,h4{
     text-align:center;
-    float:left
+    float:left;
+    width:100%;
     
 }
 p{
