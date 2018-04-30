@@ -11,8 +11,9 @@ td,th{
     padding-right: 10px;
 }
 
-h2,h3{
+h1,h2,h3,h4{
     text-align:center;
+    float:left
     
 }
 p{
